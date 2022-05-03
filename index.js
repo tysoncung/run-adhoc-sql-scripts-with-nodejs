@@ -15,7 +15,7 @@ async function runSQL() {
         host: sc['host'],
         database: sc['database'],
         password: sc['password'],
-        port: 5432,
+        port: sc['port'],
     };
     const pool = new Pool(credentials);
     let dbClient = await pool.connect();
